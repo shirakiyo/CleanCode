@@ -63,7 +63,6 @@ import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import static clean.code.chapter16.original.MonthConstants.*;
 
 /**
  * An abstract class that defines our requirements for manipulating dates,
@@ -87,40 +86,26 @@ import static clean.code.chapter16.original.MonthConstants.*;
 public abstract class SerialDate implements Comparable,
     Serializable {
 
-  /**
-   * For serialization.
-   */
+  /** For serialization.  */
   private static final long serialVersionUID = -293716040467423637L;
 
-  /**
-   * Date format symbols.
-   */
+  /** Date format symbols.  */
   public static final DateFormatSymbols
       DATE_FORMAT_SYMBOLS = new SimpleDateFormat().getDateFormatSymbols();
 
-  /**
-   * The serial number for 1 January 1900.
-   */
+  /** The serial number for 1 January 1900.  */
   public static final int SERIAL_LOWER_BOUND = 2;
 
-  /**
-   * The serial number for 31 December 9999.
-   */
+  /** The serial number for 31 December 9999.  */
   public static final int SERIAL_UPPER_BOUND = 2958465;
 
-  /**
-   * The lowest year value supported by this date format.
-   */
+  /** The lowest year value supported by this date format.  */
   public static final int MINIMUM_YEAR_SUPPORTED = 1900;
 
-  /**
-   * The highest year value supported by this date format.
-   */
+  /** The highest year value supported by this date format.  */
   public static final int MAXIMUM_YEAR_SUPPORTED = 9999;
 
-  /**
-   * Useful constant for Monday. Equivalent to java.util.Calendar.MONDAY.
-   */
+  /** Useful constant for Monday. Equivalent to java.util.Calendar.MONDAY.  */
   public static final int MONDAY = Calendar.MONDAY;
 
   /**
@@ -154,27 +139,19 @@ public abstract class SerialDate implements Comparable,
    */
   public static final int SUNDAY = Calendar.SUNDAY;
 
-  /**
-   * The number of days in each month in non leap years.
-   */
+  /** The number of days in each month in non leap years.  */
   static final int[] LAST_DAY_OF_MONTH =
       {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-  /**
-   * The number of days in a (non-leap) year up to the end of each month.
-   */
+  /** The number of days in a (non-leap) year up to the end of each month.  */
   static final int[] AGGREGATE_DAYS_TO_END_OF_MONTH =
       {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365};
 
-  /**
-   * The number of days in a year up to the end of the preceding month.
-   */
+  /** The number of days in a year up to the end of the preceding month.  */
   static final int[] AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH =
       {0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365};
 
-  /**
-   * The number of days in a leap year up to the end of each month.
-   */
+  /** The number of days in a leap year up to the end of each month.  */
   static final int[] LEAP_YEAR_AGGREGATE_DAYS_TO_END_OF_MONTH =
       {0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366};
 
