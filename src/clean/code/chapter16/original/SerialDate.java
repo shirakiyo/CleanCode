@@ -1,5 +1,3 @@
-package clean.code.chapter16.original;
-
 /* ========================================================================
  * JCommon : a free general purpose class library for the Java(tm) platform
  * ========================================================================
@@ -57,6 +55,8 @@ package clean.code.chapter16.original;
 * 05-Jan-2005 : Fixed bug in addYears() method (1096282) (DG);
 *
 */
+
+package org.jfree.date;
 
 import java.io.Serializable;
 import java.text.DateFormatSymbols;
